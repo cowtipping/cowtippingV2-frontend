@@ -1,13 +1,244 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("./normalize.css");
+
+:root {
+  /* variables here */
+  --primaryBright: #f54996;
+  --primaryDark: #a83267;
+  --secondaryBright: #f6ed2e;
+  --secondaryDark: #a9a31f;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.skew-1 {
+  width: 100%;
+  height: 50px;
+  left: 0;
+  background: linear-gradient(
+    to left top,
+    #ffffff 49%,
+    var(--primaryDark) 50%
+  );
+  margin-bottom: 40px;
+}
+
+.skew-2 {
+  width: 100%;
+  height: 50px;
+  left: 0;
+  background: linear-gradient(
+    to left bottom,
+    #ffffff 49%,
+    var(--primaryDark) 50%
+  );
+  margin-bottom: 40px;
+}
+
+header {
+  font-family: "ZX Spectrum-7", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: normal;
+  margin: 10px 0 0 0;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin: 10px 0 10px 0;
+  line-height: 60%;
+}
+
+header h2 {
+  margin-top: -4px;
+  margin-bottom: 30px;
+}
+
+.intro {
+  margin: 40px 20px 0px 20px;
+}
+
+.intro img {
+  max-width: 130px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  float: right;
+}
+
+.intro a {
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+.intro a:link,
+.intro a:visited {
+  color: var(--primaryBright);
+}
+
+.intro a:hover,
+.intro a:active {
+  color: var(--primaryDark);
+}
+
+.blob {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+nav {
+  height: 15px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 8px solid black;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6px 0 6px 0;
+}
+
+nav ul li {
+  background-color: #f54996;
+  padding: 0 4px 0 4px;
+  border-radius: 4px;
+  font-family: "ZX Spectrum-7", sans-serif;
+  font-size: 1.6rem;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.project,
+footer,
+#about,
+#projects {
+  padding: 0 10px 0 10px;
+}
+
+#about ul {
+  padding: 0;
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about li {
+  color: var(--primaryBright);
+  font-size: 2rem;
+  flex: 1 0 33%;
+  height: 80px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#about li span {
+  /* padding-left: 10px; */
+  color: black;
+  font-size: 1rem;
+}
+
+.project .tag {
+  font-size: 0.7rem;
+  padding: 4px;
+  border-radius: 30px 10px;
+  text-transform: uppercase;
+  background-color: var(--secondaryBright);
+  display: inline-block;
+}
+
+.tags {
+  display: flex;
+}
+
+.project img {
+  width: 95%;
+  height: auto;
+  border: 6px solid black;
+  z-index: -1;
+  position: relative;
+  transform: rotate(-3deg) skew(-3deg);
+}
+
+.project a:link,
+.project a:visited {
+  text-decoration: none;
+  float: right;
+  margin-left: 10px;
+  border: 4px solid var(--primaryBright);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.live-link {
+  padding-right: 7px;
+}
+
+.project-title {
+  background-color: var(--primaryBright);
+  color: white;
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 4px;
+  border-left: 8px solid white;
+  border-right: 8px solid white;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  top: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* BREAK-POINTS */
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 10px 0 0 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 10px 0 10px 0;
+  }
+
+  header h2 {
+    /* margin-top: -40px; */
+  }
 }
