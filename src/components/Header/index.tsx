@@ -1,7 +1,5 @@
 import adie from "../../assets/images/adie-pen-ward-cropped.png";
 import blob from "../../assets/images/curveNegative.svg"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 

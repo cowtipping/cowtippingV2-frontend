@@ -21,11 +21,7 @@ body {
   width: 100%;
   height: 50px;
   left: 0;
-  background: linear-gradient(
-    to left top,
-    #ffffff 49%,
-    var(--primaryDark) 50%
-  );
+  background: linear-gradient(to left top, #ffffff 49%, var(--primaryDark) 50%);
   margin-bottom: 40px;
 }
 
@@ -98,12 +94,10 @@ header h2 {
 }
 
 nav {
-  height: 15px;
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 1;
-  border-bottom: 8px solid black;
+  z-index: 2;
 }
 
 nav ul {
@@ -113,6 +107,8 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   padding: 6px 0 6px 0;
+  border-bottom: 8px solid black;
+  background-color: #ffffff;
 }
 
 nav ul li {
@@ -121,12 +117,63 @@ nav ul li {
   border-radius: 4px;
   font-family: "ZX Spectrum-7", sans-serif;
   font-size: 1.6rem;
+  /* font-size: 3rem; */
 }
 
 nav ul li a:link,
 nav ul li a:visited {
   text-decoration: none;
   color: #ffffff;
+}
+
+.menuNav.showMenu {
+  display: flex;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.menuNav {
+  animation: fadeOut 0.5s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+}
+
+.hamburger {
+  font-size: 1.5rem;
+}
+
+.toggle {
+  border: none;
+  margin: 6px 10px 0 0;
+  padding-top: 4px;
+  /* background-color: var(--secondaryBright); */
+  background-color: #cccccc;
+}
+
+.navicon {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .project,
@@ -236,9 +283,5 @@ footer {
     font-size: 3rem;
     font-weight: normal;
     margin: 10px 0 10px 0;
-  }
-
-  header h2 {
-    /* margin-top: -40px; */
   }
 }

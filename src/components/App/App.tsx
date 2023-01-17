@@ -1,15 +1,16 @@
 import ContactForm from "../ContactForm";
 import Header from "../Header";
-import Nav from "../Nav";
+//import Nav from "../Nav";
 import ProjectContainer from "../ProjectContainer";
 import Footer from "../Footer";
 import About from "../About";
+import Navbar from "../Navbar";
 
 function App() {
   return (
     <>
       <nav>
-        <Nav />
+        <Navbar />
       </nav>
       <header>
         <Header />

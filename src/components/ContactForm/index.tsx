@@ -20,10 +20,20 @@ const ContactForm = () => {
     setMessage({ ...message, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form submitted");
+    console.log(message);
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(message),
+    });
+    let result = await response.json();
     setMessage(emptyMessage);
+    alert(result.status);
   };
 
   return (
