@@ -117,7 +117,7 @@ const ProjectContainer = () => {
                   Icon={<ComputerIcon />}
                 />
                 <ProjectLink
-                  projectLink="https://github.com/cowtipping/"
+                  projectLink="https://github.com/cowtipping/cowtippingV2-frontend"
                   linkType="GitHub"
                   Icon={<GitHub />}
                 />
