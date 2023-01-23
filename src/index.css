@@ -207,6 +207,14 @@ p {
   line-height: 1.4rem;
 }
 
+/* anchor link target offset to stop navbar covering up content */
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
 #about ul {
   padding: 0;
   list-style: none;
