@@ -14,6 +14,8 @@ const emptyMessage = {
 
 const ContactForm = () => {
   const [message, setMessage] = useState(emptyMessage);
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+  const [buttonText, setButtonText] = useState("Submit")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
@@ -21,15 +23,23 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let response = await fetch("https://cowtipping-backend.onrender.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(message),
-    });
+    setSubmitDisabled(true);
+    setButtonText("Sending... may take a second... 😴")
+    let response = await fetch(
+      "https://cowtipping-backend.onrender.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(message),
+      }
+    );
     await response.json();
+
     setMessage(emptyMessage);
+    setSubmitDisabled(false);
+    setButtonText("Submit");
   };
 
   return (
@@ -89,10 +99,10 @@ const ContactForm = () => {
                   variant="contained"
                   fullWidth
                   endIcon={<SendIcon />}
-                  style={{ backgroundColor: "#f54996" }}
-                  // TODO: hacky temporary solution to colour issue. also, needs a hover style
+                  style={submitDisabled? { backgroundColor: "#cccccc", color: "black", cursor: "not-allowed" } : { backgroundColor: "#f54996"}}
+                  disabled={submitDisabled}
                 >
-                  Submit
+                  {buttonText} 
                 </Button>
               </Grid>
             </Grid>
