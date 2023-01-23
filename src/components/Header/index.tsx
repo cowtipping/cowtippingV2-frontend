@@ -1,5 +1,5 @@
 import adie from "../../assets/images/adie-pen-ward-cropped.png";
-import blob from "../../assets/images/curveNegative.svg"
+import blob from "../../assets/images/curveNegative.svg";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 
@@ -10,8 +10,14 @@ const Header = () => {
         <img src={adie} alt="Adie Nunn" />
         <h1>Adie Nunn</h1>
         <h2>Full-stack web developer.</h2>
-        <a href="https://github.com/cowtipping"><SiGithub /></a>
-        <a href="https://www.linkedin.com/in/adienunn/"><SiLinkedin /></a>
+        <div className="social-icons">
+          <a href="https://github.com/cowtipping">
+            <SiGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/adienunn/">
+            <SiLinkedin />
+          </a>
+        </div>
       </div>
 
       <div className="blob">

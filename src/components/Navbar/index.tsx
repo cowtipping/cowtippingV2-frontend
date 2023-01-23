@@ -8,6 +8,7 @@ const Navbar = () => {
     setNavbarOpen((prev) => !prev);
   };
 
+  /* TODO: fix this */
   /*  window.onscroll = function () {
     if (navbarOpen) {
       setNavbarOpen(false);

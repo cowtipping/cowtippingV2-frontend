@@ -1,6 +1,5 @@
 import ContactForm from "../ContactForm";
 import Header from "../Header";
-//import Nav from "../Nav";
 import ProjectContainer from "../ProjectContainer";
 import Footer from "../Footer";
 import About from "../About";

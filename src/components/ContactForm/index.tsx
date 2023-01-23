@@ -16,24 +16,20 @@ const ContactForm = () => {
   const [message, setMessage] = useState(emptyMessage);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
     setMessage({ ...message, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
-    console.log(message);
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("https://cowtipping-backend.onrender.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(message),
     });
-    let result = await response.json();
+    await response.json();
     setMessage(emptyMessage);
-    alert(result.status);
   };
 
   return (
@@ -94,7 +90,7 @@ const ContactForm = () => {
                   fullWidth
                   endIcon={<SendIcon />}
                   style={{ backgroundColor: "#f54996" }}
-                  // hacky temporary solution to colour issue. also, needs a hover style
+                  // TODO: hacky temporary solution to colour issue. also, needs a hover style
                 >
                   Submit
                 </Button>

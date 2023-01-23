@@ -15,7 +15,7 @@ const About = () => {
         I have a background in the arts but I've always had programming as a
         hobby. Discovering a fast-paced web development bootcamp was when I
         decided I needed a career change. It has been integral to my
-        self-development as a team player working in the Agile Scrum methology.
+        self-development as a team player working in the Agile Scrum methodology.
         With a natural curiosity for all things tech, I'm seeking further
         opportunities to work with others in this field.
         <br />
