@@ -11,10 +11,10 @@ const Header = () => {
         <h1>Adie Nunn</h1>
         <h2>Full-stack web developer.</h2>
         <div className="social-icons">
-          <a href="https://github.com/cowtipping">
+          <a href="https://github.com/cowtipping" aria-label="GitHub">
             <SiGithub />
           </a>
-          <a href="https://www.linkedin.com/in/adienunn/">
+          <a href="https://www.linkedin.com/in/adienunn/" aria-label="LinkedIn">
             <SiLinkedin />
           </a>
         </div>
