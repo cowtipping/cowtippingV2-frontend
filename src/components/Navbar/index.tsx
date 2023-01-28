@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
     <div className="navicon">
-      <button onClick={handleToggle} className="toggle">
+      <button onClick={handleToggle} className="toggle" id="menu" aria-label="menu">
         <SlMenu className="hamburger" />
       </button>
       </div>
