@@ -9,7 +9,8 @@ import GitHub from "@mui/icons-material/GitHub";
 import Description from "../Description";
 import genshin from "../../assets/images/genshin-landscape-bw.png";
 import waste from "../../assets/images/nuclear-waste-landscape-bw.png";
-import cowtipping from "../../assets/images/cowtipping-landscape-bw.png"
+import cowtipping from "../../assets/images/cowtipping-landscape-bw.png";
+import letchat from "../../assets/images/letchat-landscape-bw.png";
 
 const ProjectContainer = () => {
   return (
@@ -17,6 +18,34 @@ const ProjectContainer = () => {
       <h3>Projects</h3>
       <p>You can find out more about them by checking out the GitHub repos.</p>
       <Grid container spacing={3}>
+        <Grid item xs={12} sm={12} md={6}>
+          <div className="project">
+            <Project projectTitle="LetChat">
+              <Screenshot screenshot={letchat} alt="LetChat homepage" />
+              <div className="tags">
+                <Tags tag="Next.JS" />
+                <Tags tag="TypeScript" />
+                <Tags tag="Firebase" />
+                <Tags tag="Tailwind" />
+                <Tags tag="Express" />
+              </div>
+              <Description description="Final 4-week project for School Of Code, cohort 13. Streamlined communication between landlords and tenants." />
+              <div className="project-links">
+                <ProjectLink
+                  projectLink="http://www.letchat.co.uk"
+                  linkType="Live"
+                  Icon={<ComputerIcon />}
+                />
+                <ProjectLink
+                  projectLink="https://github.com/cowtipping/Git-Gud-LetChat-Frontend"
+                  linkType="GitHub"
+                  Icon={<GitHub />}
+                />
+              </div>
+            </Project>
+          </div>
+        </Grid>
+
         <Grid item xs={12} sm={12} md={6}>
           <div className="project">
             <Project projectTitle="Click The Nuclear Waste">
