@@ -21,7 +21,7 @@ const Header = () => {
       </div>
 
       <div className="blob">
-        <img src={blob} alt="Waves" />
+        <img src={blob} alt="blob" />
       </div>
     </>
   );
