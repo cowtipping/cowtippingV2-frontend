@@ -15,7 +15,7 @@ const emptyMessage = {
 const ContactForm = () => {
   const [message, setMessage] = useState(emptyMessage);
   const [submitDisabled, setSubmitDisabled] = useState(false);
-  const [buttonText, setButtonText] = useState("Submit")
+  const [buttonText, setButtonText] = useState("Submit");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
@@ -24,7 +24,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitDisabled(true);
-    setButtonText("Sending... may take a second... 😴")
+    setButtonText("Sending... may take a second... 😴");
     let response = await fetch(
       "https://cowtipping-backend.onrender.com/contact",
       {
@@ -44,7 +44,10 @@ const ContactForm = () => {
 
   return (
     <>
-      <Card style={{ margin: "0 auto", maxWidth: 800 }}>
+      <Card
+        style={{ margin: "0 auto", maxWidth: 800 }}
+        className="contact-form"
+      >
         <CardContent>
           <form onSubmit={handleSubmit}>
             <Grid container spacing={2}>
@@ -80,6 +83,7 @@ const ContactForm = () => {
               </Grid>
               <Grid xs={12} item>
                 <TextField
+                  className="form-message"
                   id="message"
                   name="message"
                   type="text"
@@ -99,10 +103,18 @@ const ContactForm = () => {
                   variant="contained"
                   fullWidth
                   endIcon={<SendIcon />}
-                  style={submitDisabled? { backgroundColor: "#cccccc", color: "black", cursor: "not-allowed" } : { backgroundColor: "#f54996"}}
+                  style={
+                    submitDisabled
+                      ? {
+                          backgroundColor: "#cccccc",
+                          color: "black",
+                          cursor: "not-allowed",
+                        }
+                      : { backgroundColor: "#f54996" }
+                  }
                   disabled={submitDisabled}
                 >
-                  {buttonText} 
+                  {buttonText}
                 </Button>
               </Grid>
             </Grid>

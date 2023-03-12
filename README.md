@@ -29,3 +29,6 @@ Express
 - Have the navbar vanish on scroll
 - Form feedback after user submission
 - Expand project descriptions
+- Dark reader extension fixes (transparent background on imgage)
+- Dark mode CSS ✅
+- Tests

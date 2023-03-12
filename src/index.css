@@ -5,6 +5,11 @@
   --primaryDark: #a83267;
   --secondaryBright: #f6ed2e;
   --secondaryDark: #a9a31f;
+
+  --darkModeBlack: #0d1117;
+  --darkModeOffWhite: #eeeeee;
+  --darkModeGrey: #3f3f3f;
+  --darkModeContrast: #384963;
 }
 
 html {
@@ -14,6 +19,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #ffffff;
 }
 
 .skew-1 {
@@ -93,6 +99,7 @@ header h2 {
   margin-bottom: 30px;
 }
 
+/*** NAVBAR ***/
 nav {
   width: 100%;
   position: sticky;
@@ -224,6 +231,7 @@ p {
   flex-wrap: wrap;
 }
 
+/*** TECH STACK ***/
 #about li {
   color: var(--primaryBright);
   font-size: 2rem;
@@ -239,6 +247,7 @@ p {
   font-size: 1rem;
 }
 
+/*** PROJECTS ***/
 .project .tag {
   font-size: 0.7rem;
   padding: 4px;
@@ -308,7 +317,7 @@ p {
 .project-links a:focus {
   background-color: var(--secondaryBright);
   -webkit-transform: scale(1.1) rotate(4deg);
-  transform: scale(1.1) rotate(4deg); 
+  transform: scale(1.1) rotate(4deg);
 }
 
 .hvr-grow-rotate {
@@ -323,29 +332,31 @@ p {
   transition-property: transform;
 }
 
+/*** FORM ***/
 .sending {
   padding: 10px 0 0 0;
 }
 
+/*** FOOTER ***/
 footer {
   margin-top: 20px;
   text-align: center;
   font-size: 0.8rem;
 }
 
-/* BREAK-POINTS */
+/**** BREAK-POINTS ****/
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   h1 {
     font-size: 5rem;
     margin: 100px 0 0 16%;
   }
-  
+
   h2 {
     font-size: 3rem;
     margin: 10px 0 10px 16%;
   }
-  
+
   .social-icons {
     margin-left: 16%;
   }
@@ -353,7 +364,7 @@ footer {
   .social-icons a {
     font-size: 2.3rem;
   }
-  
+
   .intro img {
     max-width: 200px;
     margin-right: 16%;
@@ -382,12 +393,12 @@ footer {
   #about ul {
     width: 80%;
   }
-  
+
   #about li {
     height: 7rem;
     font-size: 2.8rem;
   }
-  
+
   #about li span {
     font-size: 1.3rem;
   }
@@ -410,5 +421,85 @@ footer {
 
   footer p {
     font-size: 0.9rem;
+  }
+}
+
+/**** DARK MODE ****/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--darkModeBlack);
+    color: var(--darkModeOffWhite);
+  }
+
+  .skew-1 {
+    background: linear-gradient(
+      to left top,
+      var(--darkModeBlack) 49%,
+      var(--primaryDark) 50%
+    );
+  }
+
+  .skew-2 {
+    background: linear-gradient(
+      to left bottom,
+      var(--darkModeBlack) 49%,
+      var(--primaryDark) 50%
+    );
+  }
+
+  /*** NAVBAR ***/
+  nav ul {
+    border-bottom: 8px solid var(--darkModeOffWhite);
+    background-color: var(--darkModeBlack);
+  }
+
+  /*** TECH STACK ***/
+  #about li span {
+    color: var(--darkModeOffWhite);
+    font-size: 1rem;
+  }
+
+  /*** PROJECTS ***/
+  .project .tag {
+    color: var(--darkModeBlack);
+    background-color: var(--secondaryBright);
+  }
+
+  .project img {
+    border: 6px solid var(--darkModeOffWhite);
+  }
+
+  .project-links a:link,
+  .project-links a:visited {
+    background-color: var(--darkModeBlack);
+    color: var(--darkModeOffWhite);
+  }
+
+  .project-links a:hover,
+  .project-links a:active,
+  .project-links a:focus {
+    background-color: var(--secondaryBright);
+    color: var(--darkModeBlack);
+  }
+
+  .contact-form {
+    border: 1px solid white !important;
+    background-color: var(--darkModeBlack) !important;
+    color: var(--darkModeOffWhite) !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  .form-message {
+    background-color: var(--darkModeContrast) !important;
+    color: var(--darkModeOffWhite) !important;
+  }
+  textarea {
+    color: var(--darkModeOffWhite) !important;
+  }
+
+  .MuiInputLabel-outlined {
+    color: var(--secondaryBright) !important;
   }
 }
