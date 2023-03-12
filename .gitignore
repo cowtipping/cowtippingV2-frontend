@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 .env
+Dockerfile
+.dockerignore
+docker-compose.yaml
 
 npm-debug.log*
 yarn-debug.log*
