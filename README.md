@@ -26,7 +26,7 @@ Express
 - **Node**: Nodemailer package for sending form data
 
 ## Roadmap
-- Have the navbar vanish on scroll
+- Have the navbar vanish on scroll ✅
 - Form feedback after user submission
 - Expand project descriptions
 - Dark reader extension fixes (transparent background on imgage)
