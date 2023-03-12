@@ -8,15 +8,15 @@ const Navbar = () => {
     setNavbarOpen((prev) => !prev);
   };
 
-  /* TODO: fix this */
-  /*  window.onscroll = function () {
+  /* hide navbar on scroll */
+   window.onscroll = function () {
     if (navbarOpen) {
       setNavbarOpen(false);
-      console.log("scroll")
     }
-  }; */
-
-  /* {navbarOpen ? "Close" : "Open"} */
+    if (navbarOpen === false && document.documentElement.scrollTop === 0) {
+      setNavbarOpen(true);
+    }
+  };
 
   return (
     <>
