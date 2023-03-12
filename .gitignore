@@ -24,3 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 /src/assets/images/debug.log
+Dockerfile
+docker-compose.yaml
+.dockerignore
