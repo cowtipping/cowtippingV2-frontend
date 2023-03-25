@@ -22,7 +22,7 @@ const ProjectContainer = () => {
           <div className="project">
             <Project projectTitle="LetChat">
               <Screenshot screenshot={letchat} alt="LetChat homepage" />
-              <div className="tags">
+              <div className="tags" data-testid="project-tags">
                 <Tags tag="Next.JS" />
                 <Tags tag="TypeScript" />
                 <Tags tag="Firebase" />
