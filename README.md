@@ -11,11 +11,11 @@ A little collection of all my STUFF.
 **Front-end:**  
 React  
 TypeScript  
-MUI  
+MUI
 
 **Back-end:**  
 Node  
-Express  
+Express
 
 ## Lessons Learned
 
@@ -26,9 +26,10 @@ Express
 - **Node**: Nodemailer package for sending form data
 
 ## Roadmap
+
 - Have the navbar vanish on scroll ✅
 - Form feedback after user submission
 - Expand project descriptions
-- Dark reader extension fixes (transparent background on imgage)
+- Dark reader extension fixes (transparent background on image)
 - Dark mode CSS ✅
 - Tests
