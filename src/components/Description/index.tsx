@@ -1,7 +1,7 @@
 const Description = ({ description }: { description: string }) => {
   return (
     <>
-      <p>{description}</p>
+      <p data-testid="project-description">{description}</p>
     </>
   );
 };
