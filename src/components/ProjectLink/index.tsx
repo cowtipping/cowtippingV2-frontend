@@ -4,10 +4,16 @@ type ProjectLinkProps = {
   Icon: any;
 };
 
-const ProjectLink: React.FC<ProjectLinkProps> = ({ projectLink, linkType, Icon }) => {
+const ProjectLink: React.FC<ProjectLinkProps> = ({
+  projectLink,
+  linkType,
+  Icon,
+}) => {
   return (
     <>
-      <a href={projectLink}><span className="live-link">{linkType}</span> {Icon}</a>
+      <a href={projectLink} className="link-to-project">
+        <span className="live-link">{linkType}</span> {Icon}
+      </a>
     </>
   );
 };
