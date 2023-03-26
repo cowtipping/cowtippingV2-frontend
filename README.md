@@ -19,7 +19,8 @@ Express
 
 **Testing:**  
 Jest  
-React Testing Library
+React Testing Library  
+Cypress
 
 ## Stuff I Learnt
 
@@ -34,9 +35,9 @@ React Testing Library
 ## Roadmap
 
 - Have the navbar vanish on scroll ✅
+- Dark mode CSS ✅
+- Jest/RTL tests ✅
+- Cypress tests ✅
 - Form feedback after user submission
 - Expand project descriptions
 - Dark reader Chrome extension fixes (transparent background on image)
-- Dark mode CSS ✅
-- Jest/RTL tests ✅
-- Cypress tests
