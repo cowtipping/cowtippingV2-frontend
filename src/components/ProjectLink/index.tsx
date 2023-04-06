@@ -11,7 +11,12 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({
 }) => {
   return (
     <>
-      <a href={projectLink} className="link-to-project">
+      <a
+        href={projectLink}
+        className="link-to-project"
+        target="_blank"
+        rel="noreferrer"
+      >
         <span className="live-link">{linkType}</span> {Icon}
       </a>
     </>
