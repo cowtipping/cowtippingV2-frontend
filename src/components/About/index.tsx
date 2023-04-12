@@ -9,7 +9,7 @@ import { SiCypress } from "react-icons/si";
 
 const About = () => {
   return (
-    <>
+    <section id="about">
       <h3>About Me</h3>
       <p>
         I have a background in the arts but I've always had programming as a
@@ -57,7 +57,7 @@ const About = () => {
           <span>Cypress</span>
         </li>
       </ul>
-    </>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   /* hide navbar on scroll */
-   window.onscroll = function () {
+  window.onscroll = function () {
     if (navbarOpen) {
       setNavbarOpen(false);
     }
@@ -19,11 +19,16 @@ const Navbar = () => {
   };
 
   return (
-    <>
-    <div className="navicon">
-      <button onClick={handleToggle} className="toggle" id="menu" aria-label="menu">
-        <SlMenu className="hamburger" />
-      </button>
+    <nav>
+      <div className="navicon">
+        <button
+          onClick={handleToggle}
+          className="toggle"
+          id="menu"
+          aria-label="menu"
+        >
+          <SlMenu className="hamburger" />
+        </button>
       </div>
       <ul className={`menuNav ${navbarOpen ? "showMenu" : ""}`}>
         <li>
@@ -39,7 +44,7 @@ const Navbar = () => {
           <a href="#contact">contact</a>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };
 

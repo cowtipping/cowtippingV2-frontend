@@ -14,7 +14,7 @@ import letchat from "../../assets/images/letchat-landscape-bw.png";
 
 const ProjectContainer = () => {
   return (
-    <>
+    <main id="projects">
       <h3>Projects</h3>
       <p>You can find out more about them by checking out the GitHub repos.</p>
       <Grid container spacing={3}>
@@ -155,7 +155,7 @@ const ProjectContainer = () => {
           </div>
         </Grid>
       </Grid>
-    </>
+    </main>
   );
 };
 

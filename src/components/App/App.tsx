@@ -8,26 +8,14 @@ import Navbar from "../Navbar";
 function App() {
   return (
     <>
-      <nav>
-        <Navbar />
-      </nav>
-      <header>
-        <Header />
-      </header>
-      <section id="about">
-        <About />
-      </section>
+      <Navbar />
+      <Header />
+      <About />
       <div className="skew-1"></div>
-      <main id="projects">
-        <ProjectContainer />
-      </main>
+      <ProjectContainer />
       <div className="skew-2"></div>
-      <section id="contact">
-        <ContactForm />
-      </section>
-      <footer>
-        <Footer />
-      </footer>
+      <ContactForm />
+      <Footer />
     </>
   );
 }
