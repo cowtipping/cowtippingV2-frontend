@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <>
+    <section id="contact">
       <Card
         style={{ margin: "0 auto", maxWidth: 800 }}
         className="contact-form"
@@ -121,7 +121,7 @@ const ContactForm = () => {
           </form>
         </CardContent>
       </Card>
-    </>
+    </section>
   );
 };
 

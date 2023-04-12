@@ -5,7 +5,7 @@ import { SiLinkedin } from "react-icons/si";
 
 const Header = () => {
   return (
-    <>
+    <header>
       <div className="intro">
         <img src={adie} alt="Adie Nunn" />
         <h1>Adie Nunn</h1>
@@ -23,7 +23,7 @@ const Header = () => {
       <div className="blob">
         <img src={blob} alt="blob" />
       </div>
-    </>
+    </header>
   );
 };
 
