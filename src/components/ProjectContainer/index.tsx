@@ -7,7 +7,6 @@ import pokemon from "../../assets/images/pokemon-landscape-bw.png";
 import ComputerIcon from "@mui/icons-material/Computer";
 import GitHub from "@mui/icons-material/GitHub";
 import Description from "../Description";
-import genshin from "../../assets/images/genshin-landscape-bw.png";
 import waste from "../../assets/images/nuclear-waste-landscape-bw.png";
 import cowtipping from "../../assets/images/cowtipping-landscape-bw.png";
 import letchat from "../../assets/images/letchat-landscape-bw.png";
@@ -89,33 +88,6 @@ const ProjectContainer = () => {
                 />
                 <ProjectLink
                   projectLink="https://github.com/cowtipping/whos-that-pokemon"
-                  linkType="GitHub"
-                  Icon={<GitHub />}
-                />
-              </div>
-            </Project>
-          </div>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={6}>
-          <div className="project">
-            <Project projectTitle="Genshin Impact Fansite">
-              <Screenshot
-                screenshot={genshin}
-                alt="Genshin Impact characters"
-              />
-              <div className="tags">
-                <Tags tag="JavaScript" />
-              </div>
-              <Description description="It tells you which Genshin Impact characters have talent books available to farm today." />
-              <div className="project-links">
-                <ProjectLink
-                  projectLink="https://cowtipping.co.uk/genshinbooks"
-                  linkType="Live"
-                  Icon={<ComputerIcon />}
-                />
-                <ProjectLink
-                  projectLink="https://github.com/cowtipping/genshin-book-farm"
                   linkType="GitHub"
                   Icon={<GitHub />}
                 />
