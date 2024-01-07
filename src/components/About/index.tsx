@@ -6,21 +6,16 @@ import { SiNodedotjs } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiJest } from "react-icons/si";
 import { SiCypress } from "react-icons/si";
+import { SiPython } from "react-icons/si";
 
 const About = () => {
   return (
     <section id="about">
       <h3>About Me</h3>
       <p>
-        I have a background in the arts but I've always had programming as a
-        hobby. Discovering a fast-paced web development bootcamp was when I
-        decided I needed a career change. It has been integral to my
-        self-development as a team player working in the Agile Scrum
-        methodology. With a natural curiosity for all things tech, I'm seeking
-        further opportunities to work with others in this field.
+        I come from an arts background but, in a shocking plot twist, switched careers in 2023. I'm now a full-time, full-stack web developer. Hooray! On this website, you'll find a showcase of some of my increasingly 'vintage' projects that I've lovingly preserved for nostalgia's sake. My current obsession in my spare time is AI/ML/LLMs (alphabet soup is my favourite dish), as well as exploring the intersection of tech and the arts. 
         <br />
-        When I'm not coding I like gaming, writing, going for long walks and
-        wistfully staring at peoples' houseboats.
+        When I'm not coding I like gaming, writing, going for long walks and wistfully staring at peoples' houseboats.
       </p>
       <h3>My Main Tech Stack</h3>
       <ul>
@@ -47,6 +42,10 @@ const About = () => {
         <li data-testid="next-icon">
           <SiNextdotjs />
           <span>Next.js</span>
+        </li>
+        <li data-testid="python-icon">
+          <SiPython />
+          <span>Python</span>
         </li>
         <li data-testid="jest-icon">
           <SiJest />
