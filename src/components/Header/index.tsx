@@ -9,7 +9,7 @@ const Header = () => {
       <div className="intro">
         <img src={adie} alt="Adie Nunn" />
         <h1>Adie Nunn</h1>
-        <h2>Full-stack web developer.</h2>
+        <h2>Software engineer.</h2>
         <div className="social-icons">
           <a href="https://github.com/cowtipping" aria-label="GitHub">
             <SiGithub />
