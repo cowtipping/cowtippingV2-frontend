@@ -1,8 +1,11 @@
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 const Footer = () => {
   return (
     <footer>
       <p>Have a nice day.</p>
-      <p>(c) 2023 Adie Nunn</p>
+      <p>(c) {currentYear} Adie Nunn</p>
     </footer>
   );
 };
