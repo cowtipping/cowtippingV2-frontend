@@ -13,9 +13,12 @@ const About = () => {
     <section id="about">
       <h3>About Me</h3>
       <p>
-        I come from an arts background but, in a shocking plot twist, switched careers in 2023. I'm now a full-time, full-stack web developer. Hooray! On this website, you'll find a showcase of some of my increasingly 'vintage' projects that I've lovingly preserved for nostalgia's sake. My current obsession in my spare time is AI/ML/LLMs (alphabet soup is my favourite dish), as well as exploring the intersection of tech and the arts. 
+        I come from an arts background but, in a shocking plot twist, switched careers in 2023. I'm now a full-time, full-stack web developer. Hooray! On this website, you'll find a showcase of some of my increasingly 'vintage' projects that I've lovingly preserved for nostalgia's sake. My current obsession in my spare time is AI/ML/LLMs (alphabet soup is my favourite dish), as well as exploring the intersection of tech and the arts.
         <br />
         When I'm not coding I like gaming, writing, going for long walks and wistfully staring at peoples' houseboats.
+      </p>
+      <p>
+        <a href="http://blog.cowtipping.co.uk" target="_blank" rel="noopener noreferrer">Check out my blog.</a>
       </p>
       <h3>My Main Tech Stack</h3>
       <ul>
