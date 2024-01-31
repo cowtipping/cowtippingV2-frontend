@@ -53,7 +53,7 @@ const ContactForm = () => {
             <Grid container spacing={2}>
               <Grid xs={12} item>
                 <h3>Send me an email</h3>
-                <p>I like to read. 👀</p>
+                <p>I like to read. 👀 Email me@adienunn.com or use the form.</p>
               </Grid>
               <Grid xs={12} sm={6} item>
                 <TextField
@@ -106,10 +106,10 @@ const ContactForm = () => {
                   style={
                     submitDisabled
                       ? {
-                          backgroundColor: "#cccccc",
-                          color: "black",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "#cccccc",
+                        color: "black",
+                        cursor: "not-allowed",
+                      }
                       : { backgroundColor: "#f54996" }
                   }
                   disabled={submitDisabled}
