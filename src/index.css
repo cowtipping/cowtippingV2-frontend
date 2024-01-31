@@ -34,11 +34,9 @@ body {
   width: 100%;
   height: 50px;
   left: 0;
-  background: linear-gradient(
-    to left bottom,
-    #ffffff 49%,
-    var(--primaryDark) 50%
-  );
+  background: linear-gradient(to left bottom,
+      #ffffff 49%,
+      var(--primaryDark) 50%);
   margin-bottom: 40px;
 }
 
@@ -82,14 +80,26 @@ header h2 {
 }
 
 .intro a:link,
-.intro a:visited {
+.intro a:visited,
+#about a:link,
+#about a:visited {
   color: var(--primaryBright);
 }
 
 .intro a:hover,
 .intro a:active,
-.intro a:focus {
+.intro a:focus,
+#about a:hover,
+#about a:active,
+#about a:focus {
   color: var(--primaryDark);
+}
+
+#about a {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .blob img {
@@ -159,6 +169,7 @@ nav ul li:focus {
     opacity: 0;
     transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -170,6 +181,7 @@ nav ul li:focus {
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(0.5);
@@ -245,6 +257,7 @@ p {
 #about li span {
   color: black;
   font-size: 1rem;
+  padding-top: 8px;
 }
 
 /*** PROJECTS ***/
@@ -433,19 +446,27 @@ footer {
   }
 
   .skew-1 {
-    background: linear-gradient(
-      to left top,
-      var(--darkModeBlack) 49%,
-      var(--primaryDark) 50%
-    );
+    background: linear-gradient(to left top,
+        var(--darkModeBlack) 49%,
+        var(--primaryDark) 50%);
   }
 
   .skew-2 {
-    background: linear-gradient(
-      to left bottom,
-      var(--darkModeBlack) 49%,
-      var(--primaryDark) 50%
-    );
+    background: linear-gradient(to left bottom,
+        var(--darkModeBlack) 49%,
+        var(--primaryDark) 50%);
+  }
+
+  /*** ABOUT ME ***/
+  #about a:link,
+  #about a:visited {
+    color: var(--secondaryBright);
+  }
+
+  #about a:hover,
+  #about a:active,
+  #about a:focus {
+    color: var(--secondaryDark);
   }
 
   /*** NAVBAR ***/
@@ -495,6 +516,7 @@ footer {
     background-color: var(--darkModeContrast) !important;
     color: var(--darkModeOffWhite) !important;
   }
+
   textarea {
     color: var(--darkModeOffWhite) !important;
   }
