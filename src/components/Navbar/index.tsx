@@ -43,9 +43,6 @@ const Navbar = () => {
         <li>
           <a href="https://blog.cowtipping.co.uk" target="_blank" rel="noopener noreferrer">blog</a>
         </li>
-        <li>
-          <a href="#contact">contact</a>
-        </li>
       </ul>
     </nav>
   );

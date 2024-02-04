@@ -4,7 +4,8 @@ const currentYear = currentDate.getFullYear();
 const Footer = () => {
   return (
     <footer>
-      <p>Have a nice day.</p>
+      <p>This site was made with React, TypeScript and formerly Node (until I deemed it unnecessary and binned it). Tests are done in Jest and Cypress.</p>
+      <p>Have a nice day. ^_^</p>
       <p>(c) {currentYear} Adie Nunn</p>
     </footer>
   );

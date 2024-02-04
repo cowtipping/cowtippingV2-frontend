@@ -1,4 +1,3 @@
-import ContactForm from "../ContactForm";
 import Header from "../Header";
 import ProjectContainer from "../ProjectContainer";
 import Footer from "../Footer";
@@ -14,7 +13,7 @@ function App() {
       <div className="skew-1"></div>
       <ProjectContainer />
       <div className="skew-2"></div>
-      <ContactForm />
+
       <Footer />
     </>
   );

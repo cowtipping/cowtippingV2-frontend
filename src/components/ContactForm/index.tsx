@@ -1,32 +1,56 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField/TextField";
+import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 
-const emptyMessage = {
+interface Message {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const emptyMessage: Message = {
   name: "",
   email: "",
   message: "",
 };
 
 const ContactForm = () => {
-  const [message, setMessage] = useState(emptyMessage);
-  const [submitDisabled, setSubmitDisabled] = useState(false);
-  const [buttonText, setButtonText] = useState("Submit");
+  const [message, setMessage] = useState<Message>(emptyMessage);
+  const [submitDisabled, setSubmitDisabled] = useState<boolean>(false);
+  const [buttonText, setButtonText] = useState<string>("Submit");
+  const [errors, setErrors] = useState<Message>(emptyMessage);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const validateEmail = (email: string): boolean => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
+
+  const validateForm = (): boolean => {
+    let formErrors: Message = { ...emptyMessage };
+    formErrors.name = message.name ? "" : "Name is required";
+    formErrors.email = message.email ? (validateEmail(message.email) ? "" : "Email is not valid") : "Email is required";
+    formErrors.message = message.message ? "" : "Message is required";
+    setErrors(formErrors);
+    return !Object.values(formErrors).some((error) => error.length > 0);
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
     setSubmitDisabled(true);
     setButtonText("Sending... may take a second... 😴");
-    let response = await fetch(
-      "https://cowtipping-backend.onrender.com/contact",
+    const response = await fetch(
+      process.env.REACT_APP_BACKEND_URL || "",
       {
         method: "POST",
         headers: {
@@ -66,6 +90,8 @@ const ContactForm = () => {
                   required
                   value={message.name}
                   onChange={handleChange}
+                  error={Boolean(errors.name)}
+                  helperText={errors.name}
                 />
               </Grid>
               <Grid xs={12} sm={6} item>
@@ -79,6 +105,8 @@ const ContactForm = () => {
                   required
                   value={message.email}
                   onChange={handleChange}
+                  error={Boolean(errors.name)}
+                  helperText={errors.name}
                 />
               </Grid>
               <Grid xs={12} item>
@@ -95,6 +123,8 @@ const ContactForm = () => {
                   rows={4}
                   value={message.message}
                   onChange={handleChange}
+                  error={Boolean(errors.name)}
+                  helperText={errors.name}
                 />
               </Grid>
               <Grid xs={12} item>
