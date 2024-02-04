@@ -8,7 +8,6 @@ import ComputerIcon from "@mui/icons-material/Computer";
 import GitHub from "@mui/icons-material/GitHub";
 import Description from "../Description";
 import waste from "../../assets/images/nuclear-waste-landscape-bw.png";
-import cowtipping from "../../assets/images/cowtipping-landscape-bw.png";
 import letchat from "../../assets/images/letchat-landscape-bw.png";
 
 const ProjectContainer = () => {
@@ -96,36 +95,6 @@ const ProjectContainer = () => {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6}>
-          <div className="project">
-            <Project projectTitle="Portfolio">
-              <Screenshot
-                screenshot={cowtipping}
-                alt="Adie Nunn's portfolio homepage"
-              />
-              <div className="tags">
-                <Tags tag="React" />
-                <Tags tag="TypeScript" />
-                <Tags tag="Express" />
-                <Tags tag="Node" />
-                <Tags tag="MUI" />
-              </div>
-              <Description description="It's this site. The one you are on." />
-              <div className="project-links">
-                <ProjectLink
-                  projectLink="https://cowtipping.co.uk/"
-                  linkType="Live"
-                  Icon={<ComputerIcon />}
-                />
-                <ProjectLink
-                  projectLink="https://github.com/cowtipping/cowtippingV2-frontend"
-                  linkType="GitHub"
-                  Icon={<GitHub />}
-                />
-              </div>
-            </Project>
-          </div>
-        </Grid>
       </Grid>
     </main>
   );
