@@ -13,10 +13,6 @@ React
 TypeScript  
 MUI
 
-**Back-end:**  
-Node  
-Express
-
 **Testing:**  
 Jest  
 React Testing Library  
@@ -25,7 +21,7 @@ Cypress
 ## Stuff I Learnt
 
 - **TypeScript**: Using React.FC to use props in function components.
-- **MUI**: First time using it - form components, buttons, cards, grid.
+- **MUI**: First time using it - buttons, cards, grid.
 - **CSS**: <code>animation-fill-mode</code>: forwards to stop animations, <code>prefers-color-scheme</code> in media queries. 😎
 - **React**: Using state for toggling a menu and disabling a button on submit.
 - **JavaScript**: <code>window.onscroll</code>.
@@ -38,6 +34,5 @@ Cypress
 - Dark mode CSS ✅
 - Jest/RTL tests ✅
 - Cypress tests ✅
-- Form feedback after user submission
 - Expand project descriptions
 - Dark reader Chrome extension fixes (transparent background on image)
