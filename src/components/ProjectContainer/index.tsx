@@ -30,11 +30,6 @@ const ProjectContainer = () => {
               <Description description="Final 4-week project for School Of Code, cohort 13. Streamlined communication between landlords and tenants." />
               <div className="project-links">
                 <ProjectLink
-                  projectLink="http://www.letchat.co.uk"
-                  linkType="Live"
-                  Icon={<ComputerIcon />}
-                />
-                <ProjectLink
                   projectLink="https://github.com/cowtipping/Git-Gud-LetChat-Frontend"
                   linkType="GitHub"
                   Icon={<GitHub />}
